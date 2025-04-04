@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso Creativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .category {
+            width: 90%;
+            max-width: 300px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            text-align: left;
+        }
+        .category:hover {
+            transform: scale(1);
+        }
+        .full-text {
+            display: none;
+            margin-top: 10px;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+        .full-text.show {
+            display: block;
+            opacity: 1;
+        }
+        .toggle-btn {
+            background: #ffd700;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proceso Creativo</h1>
+        <p>Así es como creo mis ideas, grabo, edito y subo mis videos para reels y TikTok.</p>
+    </header>
+    <main>
+        <section class="category ideas">
+            <h2>IDEAS</h2>
+            <p>Las ideas deben ser auténticas y transmitir emociones...</p>
+            <div class="full-text">
+                <p>Las ideas tienen que ser auténticas, transmitir la esencia de uno. Si no entiendes bien algo sobre el tema al tratarlo, el tiempo va a ser imposible, así que no hay que intentar ser, sino que ser lo que es. No te enfoques en depender de nadie, solo que hay que entenderlo por algo que controlas. Recolectar contenido, revisar ideas, analizar otros videos y darles tu esencia. Con todo esto claro, ya solo es cuestión de estructurarlo y formalizarlo.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+        <section class="category guion">
+            <h2>GUION</h2>
+            <p>No hay una fórmula exacta, pero así lo hago...</p>
+            <div class="full-text">
+                <p>Me puedo tardar hasta 30 minutos pensando cómo narrar el video, el hook es importante, debe enganchar desde los 5-10 segundos iniciales. Escribo lo más importante, algunas frases clave y adapto con lenguaje natural. Siempre intento que el mensaje sea claro y sin rodeos.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+        <section class="category grabar">
+            <h2>GRABAR</h2>
+            <p>La grabación tiene que ser dinámica...</p>
+            <div class="full-text">
+                <p>Utilizo una GoPro y un DJI Mic 2. Cuido la iluminación y los encuadres para que el video se vea profesional. Hago tomas variadas para mantener el dinamismo.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+        <section class="category editar">
+            <h2>EDITAR</h2>
+            <p>Todo mi edición es en CapCut...</p>
+            <div class="full-text">
+                <p>Edición rápida con cortes de 15-20 segundos. Utilizo textos llamativos y efectos de sonido para mantener la atención del espectador.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+        <section class="category subir">
+            <h2>SUBIR</h2>
+            <p>Lo ideal es subir desde el iPhone o la app web...</p>
+            <div class="full-text">
+                <p>Escribo buenos captions, agrego hashtags estratégicos y reviso los mejores horarios para publicar.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+        <section class="category extra">
+            <h2>EXTRA</h2>
+            <p>Es importante buscar formas de mejorar el proceso...</p>
+            <div class="full-text">
+                <p>Pruebo contenido, analizo tendencias y colaboro con otros creadores para mejorar mis videos.</p>
+            </div>
+            <button class="toggle-btn">Ver más</button>
+        </section>
+    </main>
+    <script>
+       document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const fullText = button.previousElementSibling;
+        
+        if (!fullText.classList.contains('show')) {
+            fullText.style.display = 'block'; // Asegurar que esté visible antes de la animación
+            setTimeout(() => {
+                fullText.classList.add('show');
+            }, 10);
+            button.textContent = 'Ver menos';
+        } else {
+            fullText.classList.remove('show');
+            setTimeout(() => {
+                fullText.style.display = 'none';
+            }, 300); // Tiempo igual a la transición de CSS
+            button.textContent = 'Ver más';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
